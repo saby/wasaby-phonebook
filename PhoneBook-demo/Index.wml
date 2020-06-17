@@ -1,0 +1,5 @@
+<Controls.Application title="PhoneBook">
+   <PhoneBook-demo.PhoneBook.PhoneBook
+      data="{{ _phoneBookData }}"
+   />
+</Controls.Application>
