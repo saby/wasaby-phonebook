@@ -44,6 +44,11 @@ export default class PhoneBook extends Control<IPhoneBookOptions> {
         });
     }
 
+    protected _onAddButtonClick(): void {
+        this._children.gridView.beginAdd(null);
+    }
+
+
     static getDefaultOptions(): IPhoneBookOptions {
         return {
             data: []

@@ -18,4 +18,10 @@
       </ws:header>
    </Controls.grid:View>
 
+   <Controls.buttons:Button
+      caption="Новая запись"
+      icon="icon-NewCategory"
+      iconSize="s"
+      on:click="_onAddButtonClick()"
+   />
 </div>
