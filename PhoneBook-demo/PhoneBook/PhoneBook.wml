@@ -5,6 +5,10 @@
       keyProperty="key"
       source="{{ _source }}"
    >
+      <ws:editingConfig
+         editOnClick="{{ true }}"
+         toolbarVisibility="{{ true }}"
+      />
       <ws:header>
          <ws:Array>
             <ws:Object title="ФИО"/>
