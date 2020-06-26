@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui_module for_cdn="0" id="19b2ff1d-403f-4b02-8e53-5aae742a5cc5" name="PhoneBook-demo" required="0" responsible="Кашин О.А." version="1.00">
+
+  <description/>
+
+  <depends>
+     <module id="f6fdf353-3ab3-4dbb-8671-01c2b418bf0a" name="Controls"/>
+     <module id="af50caf5-f84b-4b81-a19c-6f6618372dbd" name="Controls-default-theme"/>
+     <module id="a10cb1cb-b23d-4ef6-a757-4f7382e0e8d1" name="SbisEnvUI"/>
+  </depends>
+
+  <load_after/>
+
+  <parameters/>
+
+  <resources/>
+
+  <preload/>
+
+  <unit_test/>
+
+</ui_module>
