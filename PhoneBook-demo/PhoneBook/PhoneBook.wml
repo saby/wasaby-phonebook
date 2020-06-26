@@ -2,6 +2,8 @@
    <Controls.grid:View
       name="gridView"
       columns="{{ _columns }}"
+      itemActions="{{ _itemActions }}"
+      itemActionsPosition="outside"
       keyProperty="key"
       source="{{ _source }}"
    >

@@ -2,6 +2,7 @@ import { Control, IControlOptions, TemplateFunction } from 'UI/Base';
 import * as template from 'wml!PhoneBook-demo/PhoneBook/PhoneBook';
 import { Memory } from 'Types/source';
 import { View, IColumn } from 'Controls/grid';
+import { IItemAction } from 'Controls/itemActions';
 import * as columnTemplate from 'wml!PhoneBook-demo/PhoneBook/columnTemplate';
 import * as phoneColumnTemplate from 'wml!PhoneBook-demo/PhoneBook/phoneColumnTemplate';
 
@@ -31,6 +32,12 @@ export default class PhoneBook extends Control<IPhoneBookOptions> {
         displayProperty: 'Phone',
         template: phoneColumnTemplate,
         width: '270px'
+    }];
+    protected _itemActions: IItemAction[] = [{
+        icon: 'icon-Erase',
+        iconStyle: 'danger',
+        id: 'delete',
+        title: 'Удалить'
     }];
 
     protected _children: {
