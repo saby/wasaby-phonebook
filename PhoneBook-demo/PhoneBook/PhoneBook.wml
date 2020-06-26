@@ -1,24 +1,34 @@
 <div>
-   <Controls.grid:View
-      name="gridView"
-      columns="{{ _columns }}"
-      itemActions="{{ _itemActions }}"
-      itemActionsPosition="outside"
+   <Controls.list:DataContainer
       keyProperty="key"
       source="{{ _source }}"
    >
-      <ws:editingConfig
-         editOnClick="{{ true }}"
-         toolbarVisibility="{{ true }}"
-      />
-      <ws:header>
-         <ws:Array>
-            <ws:Object title="ФИО"/>
-            <ws:Object title="Адрес"/>
-            <ws:Object title="Телефон"/>
-         </ws:Array>
-      </ws:header>
-   </Controls.grid:View>
+      <div>
+         <Controls.list:Remover name="listRemover"/>
+         <Controls.list:Container>
+            <Controls.grid:View
+               name="gridView"
+               columns="{{ _columns }}"
+               itemActions="{{ _itemActions }}"
+               itemActionsPosition="outside"
+               itemActionVisibilityCallback="{{ _isItemActionVisible }}"
+               on:actionClick="_onActionClick()"
+            >
+               <ws:editingConfig
+                  editOnClick="{{ true }}"
+                  toolbarVisibility="{{ true }}"
+               />
+               <ws:header>
+                  <ws:Array>
+                     <ws:Object title="ФИО"/>
+                     <ws:Object title="Адрес"/>
+                     <ws:Object title="Телефон"/>
+                  </ws:Array>
+               </ws:header>
+            </Controls.grid:View>
+         </Controls.list:Container>
+      </div>
+   </Controls.list:DataContainer>
 
    <Controls.buttons:Button
       caption="Новая запись"
