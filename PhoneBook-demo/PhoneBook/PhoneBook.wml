@@ -1,3 +1,17 @@
 <div>
-   Hello world!
+   <Controls.grid:View
+      name="gridView"
+      columns="{{ _columns }}"
+      keyProperty="key"
+      source="{{ _source }}"
+   >
+      <ws:header>
+         <ws:Array>
+            <ws:Object title="ФИО"/>
+            <ws:Object title="Адрес"/>
+            <ws:Object title="Телефон"/>
+         </ws:Array>
+      </ws:header>
+   </Controls.grid:View>
+
 </div>
