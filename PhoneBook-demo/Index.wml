@@ -1,2 +1,3 @@
 <Controls.Application title="PhoneBook">
+   <PhoneBook-demo.PhoneBook.PhoneBook/>
 </Controls.Application>
