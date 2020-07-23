@@ -7,21 +7,16 @@
       "url": "https://github.com/saby/wasaby-phonebook.git"
    },
    "scripts": {
-      "update-cli-store": "wasaby-cli --tasks=initStore --only",
+      "build:init": "wasaby-cli --tasks=initStore",
       "build:typescript": "saby-typescript --install --mode=development",
-      "prepare": "npm run update-cli-store && npm run build:typescript",
-      "build": "wasaby-cli --tasks=build --only",
+      "build": "wasaby-cli --tasks=build --watcher",
+      "prepare": "npm run build:init && npm run build:typescript",
       "start": "wasaby-cli --tasks=app"
    },
    "wasaby-cli": {
       "port": 8080
    },
    "devDependencies": {
-      "cookie-parser": "^1.4.3",
-      "express": "^4.16.4",
-      "wasaby-cli": "git+https://github.com/saby/wasaby-cli.git#rc-20.4100",
-      "@types/cookie-parser": "^1.4.2",
-      "@types/express": "^4.17.1",
-      "@types/node": "^12.11.1"
+      "wasaby-cli": "git+https://github.com/saby/wasaby-cli.git#rc-20.4100"
    }
 }
