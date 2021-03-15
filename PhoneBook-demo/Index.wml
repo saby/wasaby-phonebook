@@ -1,5 +1,5 @@
-<Controls.Application title="PhoneBook">
+<SbisEnvUI.Bootstrap title="PhoneBook">
    <PhoneBook-demo.PhoneBook.PhoneBook
       data="{{ _phoneBookData }}"
    />
-</Controls.Application>
+</SbisEnvUI.Bootstrap>
