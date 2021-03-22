@@ -6,7 +6,7 @@
       <div>
          <Controls.list:Remover name="listRemover"/>
          <Controls.list:Container>
-            <Controls.grid:View
+            <Controls.gridNew:View
                name="gridView"
                columns="{{ _columns }}"
                itemActions="{{ _itemActions }}"
@@ -25,7 +25,7 @@
                      <ws:Object title="Телефон"/>
                   </ws:Array>
                </ws:header>
-            </Controls.grid:View>
+            </Controls.gridNew:View>
          </Controls.list:Container>
       </div>
    </Controls.list:DataContainer>

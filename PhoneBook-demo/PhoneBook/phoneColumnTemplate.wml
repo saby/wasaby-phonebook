@@ -1,28 +1,28 @@
 <ws:partial
-   template="Controls/grid:ColumnTemplate"
-   itemData="{{ itemData }}"
+   template="Controls/gridNew:ColumnTemplate"
+   scope="{{ _options }}"
    attr:class="controls-Grid__row-cell__content_baseline_L"
 >
    <ws:contentTemplate>
-      <ws:if data="{{ itemData.isEditing }}">
+      <ws:if data="{{ item.isEditing() }}">
          <ws:partial template="Controls/list:EditingTemplate"
                      enabled="{{true}}"
-                     itemData="{{ itemData }}"
-                     value="{{ itemData.item.Phone }}">
+                     scope="{{ _options }}"
+                     value="{{ item.contents.Phone }}">
             <ws:editorTemplate>
                <Controls.validate:InputContainer>
                   <ws:validators>
-                     <ws:Function value="{{ itemData.item.Phone }}">Controls/validate:isRequired</ws:Function>
+                     <ws:Function value="{{ item.contents.Phone }}">Controls/validate:isRequired</ws:Function>
                   </ws:validators>
                   <ws:content>
-                     <Controls.input:Phone bind:value="itemData.item.Phone" />
+                     <Controls.input:Phone bind:value="item.contents.Phone" />
                   </ws:content>
                </Controls.validate:InputContainer>
             </ws:editorTemplate>
          </ws:partial>
       </ws:if>
       <ws:else>
-         <Controls.decorator:Phone value="{{ itemData.item.Phone }}" />
+         <Controls.decorator:Phone value="{{ item.contents.Phone }}" />
       </ws:else>
    </ws:contentTemplate>
 </ws:partial>
