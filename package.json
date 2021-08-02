@@ -1,6 +1,6 @@
 {
    "name": "wasaby-phonebook",
-   "version": "20.4100.0",
+   "version": "21.4100.0",
    "license": "MS-RL",
    "repository": {
       "type": "git",
@@ -8,7 +8,7 @@
    },
    "scripts": {
       "build:init": "wasaby-cli --tasks=initStore",
-      "build:typescript": "saby-typescript --install --mode=development",
+      "build:typescript": "wasaby-cli --tasks=prepare",
       "build": "wasaby-cli --tasks=build --watcher",
       "prepare": "npm run build:init && npm run build:typescript",
       "start": "wasaby-cli --tasks=app"
@@ -17,6 +17,6 @@
       "port": 8080
    },
    "devDependencies": {
-      "wasaby-cli": "git+https://github.com/saby/wasaby-cli.git#rc-20.4100"
+      "wasaby-cli": "git+https://github.com/saby/wasaby-cli.git#rc-21.4100"
    }
 }

@@ -1,5 +1,5 @@
 <ws:partial
-   template="Controls/gridNew:ColumnTemplate"
+   template="Controls/grid:ColumnTemplate"
    scope="{{ _options }}"
    attr:class="controls-Grid__row-cell__content_baseline_L"
 >
