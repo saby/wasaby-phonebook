@@ -9,7 +9,7 @@
    "scripts": {
       "build:init": "wasaby-cli --tasks=initStore",
       "build:typescript": "wasaby-cli --tasks=prepare",
-      "build": "wasaby-cli --tasks=build --watcher",
+      "build": "wasaby-cli --tasks=build",
       "prepare": "npm run build:init && npm run build:typescript",
       "start": "wasaby-cli --tasks=app"
    },
